@@ -139,7 +139,7 @@ function carbonFootprintCalculator() {
 
 }
 
-const quizForm = document.getElementById("quizForm");
+const quizForm = document.getElementById("carbonForm");
 
 // Function to check if an input field has been answered
 function isAnswered() {
