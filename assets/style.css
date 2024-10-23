@@ -1,6 +1,6 @@
 
 :root {
-  --primary-color: #1fdd4b;
+  --primary-color: #d9f2b4;
   --secondary-color: #bcf4f5;
   --standby-color: #4509fa;
 } 
@@ -16,7 +16,7 @@
 body {
 
 
-    background-color: var(--secondary-color)
+    background-color: var(--primary-color)
 }
 
 /* .logo {
