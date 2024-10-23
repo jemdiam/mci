@@ -31,3 +31,20 @@ body {
 footer p {
   margin-bottom: 0;
 }
+
+/* Calculator Container */
+.calculate-container {
+  margin: 5em auto 8em;
+}
+.calculate-header {
+  margin-top: 5em;
+}
+.question {
+  display: none; /* Hide all questions initially */
+}
+.question.active {
+  display: block; /* Show the active question */
+}
+.calculate-container .form-check {
+  margin: 1rem 0;
+}
