@@ -53,6 +53,10 @@ document.addEventListener("DOMContentLoaded", function() {
             submitButton.style.display = 'none';
         }
     }
+
+    function submitQuestion() {
+        carbonFootprintCalculator();
+    }
 })
 
 
@@ -116,5 +120,22 @@ function carbonFootprintCalculator() {
     
     // Total carbon footprint
     let totalFootprint = electricFootprint + gasFootprint + oilFootprint + mileageFootprint + shortFlightFootprint + longFlightFootprint + recycleFootprint;
+    
+    // Display result and comparison 
+    let resultText = `Your estimated yearly carbon footprint is: ${totalFootprint.toFixed(2)} pounds of CO2\n`;
+    
+    if (totalFootprint < 6000) { 
+        resultText += "You have a very low carbon footprint. Great job!"; 
+    } else if (totalFootprint >= 6000 && totalFootprint < 16000) {
+        resultText += "Your carbon footprint is considered low."; 
+    } else if (totalFootprint >= 16000 && totalFootprint < 22000) {
+        resultText += "Your carbon footprint is average."; }
+    else {
+        resultText += "Your carbon footprint is high. Consider adopting more sustainable practices.";
+    } 
+    document.getElementById("result").innerText = resultText; 
+
 }
+
+
 
