@@ -1,3 +1,64 @@
+// Wait for the DOM to finish loading before running the agme
+//Get the button elements and add event listeners to them
+
+document.addEventListener("DOMContentLoaded", function() {
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    const submitButton = document.getElementById('submitButton');
+
+    prevButton.addEventListener("click", function() {
+        prevQuestion();
+    })
+
+    nextButton.addEventListener("click", function() {
+        nextQuestion();
+    })
+
+    submitButton.addEventListener("click", function() {
+        submitQuestion();
+    })
+
+    let currentQuestion = 0;
+    const questions = document.querySelectorAll('.question');
+
+    function showQuestion(index) {
+        questions.forEach((question, i) => {
+            question.classList.remove('active');
+            if (i === index) {
+                question.classList.add('active');
+            }
+        });
+    }
+
+    function nextQuestion() {
+        if (currentQuestion < questions.length - 1) {
+            currentQuestion++;
+            showQuestion(currentQuestion);
+        }
+        prevButton.disabled = currentQuestion === 0;
+        if (currentQuestion === questions.length - 1) {
+            nextButton.style.display = 'none';
+            submitButton.style.display = 'inline-block';
+        }
+    }
+
+    function prevQuestion() {
+        if (currentQuestion > 0) {
+            currentQuestion--;
+            showQuestion(currentQuestion);
+        }
+        prevButton.disabled = currentQuestion === 0;
+        if (currentQuestion < questions.length - 1) {
+            nextButton.style.display = 'inline-block';
+            submitButton.style.display = 'none';
+        }
+    }
+})
+
+
+/**
+ * Main CarbonFootprint Calculation function
+ */
 function carbonFootprintCalculator() {
     
     // Collect form values
@@ -56,3 +117,4 @@ function carbonFootprintCalculator() {
     // Total carbon footprint
     let totalFootprint = electricFootprint + gasFootprint + oilFootprint + mileageFootprint + shortFlightFootprint + longFlightFootprint + recycleFootprint;
 }
+
