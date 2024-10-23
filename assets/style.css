@@ -1,3 +1,11 @@
+
+:root {
+  --primary-color: #d9f2b4;
+  --secondary-color: #bcf4f5;
+  --standby-color: #ffb7c3;
+} 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -7,5 +15,6 @@
 
 body {
 
-    background-color: #d9f2b4;
+
+    background-color: var(--primary-color)
 }
