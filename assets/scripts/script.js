@@ -137,5 +137,26 @@ function carbonFootprintCalculator() {
 
 }
 
+const quizForm = document.getElementById("quizForm");
+
+// Function to check if an input field has been answered
+function isAnswered() {
+  // Check radio buttons
+  const radioAnswered = Array.from(quizForm.querySelectorAll('input[type="radio"]')).some(radio => radio.checked);
+  
+  // Check numbers
+  
+  const numberAnswered = Array.from(quizForm.querySelectorAll('input[type="number"]')).some(numberInput => numberInput.value !== '');
+
+ 
+
+  // Return true if at least one type of question is answered
+  return radioAnswered || numberAnswered;
+}
+
+// Add event listeners to detect changes in the form
+quizForm.addEventListener('change', function() {
+  nextButton.disabled = !isAnswered(); // Enable/disable button based on answers
+});
 
 
