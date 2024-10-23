@@ -1,8 +1,8 @@
 
 :root {
-  --primary-color: #d9f2b4;
+  --primary-color: #1fdd4b;
   --secondary-color: #bcf4f5;
-  --standby-color: #ffb7c3;
+  --standby-color: #4509fa;
 } 
 
 
@@ -16,5 +16,18 @@
 body {
 
 
-    background-color: var(--primary-color)
+    background-color: var(--secondary-color)
+}
+
+/* .logo {
+  color: var(--primary-color);
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+} */
+
+
+
+footer p {
+  margin-bottom: 0;
 }
