@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if (currentQuestion < questions.length - 1) {
             currentQuestion++;
             showQuestion(currentQuestion);
+            console.log(questions[currentQuestion]);
+            console.log(currentQuestion);
         }
         prevButton.disabled = currentQuestion === 0;
         if (currentQuestion === questions.length - 1) {
