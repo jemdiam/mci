@@ -40,7 +40,7 @@
         <container>
             <header class="calculate-header text-center">
                 <h2>Carbon Footprint Calculator</h2>
-                <p>Answer the questions one by one to estimate your yearly carbon footprint.</p>
+                <p>Answer the questions below to estimate your yearly carbon footprint.</p>
             </header>
         
             <div class="container text-center calculate-container">
@@ -78,8 +78,22 @@
                         </div>
                         <!-- Question 4: Mileage -->
                         <div class="question">
-                            <p>What is your total yearly mileage on your car?</p>
-                            <input type="number" name="mileage" min="0" step="1" required>
+                            <p>How often do you drive your car?</p>
+                            <label>
+                                <input type="radio" name="driving_frequency" value="Every day" required> Every day
+                            </label><br>
+                            <label>
+                                <input type="radio" name="driving_frequency" value="A few times a week"> A few times a week
+                            </label><br>
+                            <label>
+                                <input type="radio" name="driving_frequency" value="A few times a month"> A few times a month
+                            </label><br>
+                            <label>
+                                <input type="radio" name="driving_frequency" value="Rarely"> Rarely (less than once a month)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="driving_frequency" value="Never"> Never
+                            </label>
                         </div>
                         <!-- Question 5: Short Flights -->
                         <div class="question">

@@ -71,7 +71,12 @@ function carbonFootprintCalculator() {
     let houseSize = document.querySelector('input[name="houseSize"]:checked').value;
     let heatingType = document.querySelector('input[name="heatingType"]:checked').value;
     let cookingGas = document.querySelector('input[name="cookingGas"]:checked').value;
-    let mileage = parseFloat(document.querySelector('input[name="mileage"]').value) || 0;
+
+    // estimate yearly milage
+    let userFrequency = document.querySelector('input[name="driving_frequency"]:checked').value;
+    let mileage = calculateYearlyMileage(userFrequency);
+    console.log("Estimated yearly mileage:", mileage);
+    
     let shortFlights = parseFloat(document.querySelector('input[name="shortFlights"]').value) || 0;
     let longFlights = parseFloat(document.querySelector('input[name="longFlights"]').value) || 0;
     let electricCar = document.querySelector('input[name="electricCar"]:checked').value;
@@ -137,6 +142,23 @@ function carbonFootprintCalculator() {
     } 
     document.getElementById("result").innerText = resultText; 
 
+}
+
+function calculateYearlyMileage(frequency) {
+    switch(frequency) {
+        case "Every day":
+            return "10,950 - 14,600 miles/year";
+        case "A few times a week":
+            return "3,120 - 6,240 miles/year";
+        case "A few times a month":
+            return "480 - 1,080 miles/year";
+        case "Rarely":
+            return "Less than 240 miles/year";
+        case "Never":
+            return "0 miles/year";
+        default:
+            return "Unknown";
+    }
 }
 
 
