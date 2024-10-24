@@ -66,3 +66,14 @@ footer p {
 .calculate-container .form-check {
   margin: 1rem 0;
 }
+.calculate-header.calculate-header-result {
+
+  max-width: 80%;
+  margin: 10rem auto;
+}
+
+.carbon-result {
+  font-size: 2rem;
+  font-weight: bold;
+
+}
