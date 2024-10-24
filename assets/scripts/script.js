@@ -76,9 +76,17 @@ function carbonFootprintCalculator() {
     let userFrequency = document.querySelector('input[name="driving_frequency"]:checked').value;
     let mileage = calculateYearlyMileage(userFrequency);
     console.log("Estimated yearly mileage:", mileage);
-    
-    let shortFlights = parseFloat(document.querySelector('input[name="shortFlights"]').value) || 0;
-    let longFlights = parseFloat(document.querySelector('input[name="longFlights"]').value) || 0;
+
+    //let shortFlights = parseFloat(document.querySelector('input[name="shortFlights"]').value) || 0;
+    let userShortFlights = document.querySelector('input[name="short_flights"]:checked').value;
+    let shortFlights = estimateShortFlights(userShortFlights);
+    console.log("Estimated number of short flights:", shortFlights);
+
+    // let longFlights = parseFloat(document.querySelector('input[name="longFlights"]').value) || 0;
+    let userLongFlights = document.querySelector('input[name="short_flights"]:checked').value;
+    let longFlights = estimateShortFlights(userLongFlights);
+    console.log("Estimated number of short flights:", longFlights);
+
     let electricCar = document.querySelector('input[name="electricCar"]:checked').value;
     let recycleAtHome = document.querySelector('input[name="recycleAtHome"]:checked').value;
     
@@ -126,6 +134,10 @@ function carbonFootprintCalculator() {
     }
     
     // Total carbon footprint
+    console.log(mileage);
+    console.log(mileageFootprint);
+    console.log(shortFlightFootprint);
+    console.log(longFlightFootprint);
     let totalFootprint = electricFootprint + gasFootprint + oilFootprint + mileageFootprint + shortFlightFootprint + longFlightFootprint + recycleFootprint;
     
     // Display result and comparison 
@@ -147,15 +159,28 @@ function carbonFootprintCalculator() {
 function calculateYearlyMileage(frequency) {
     switch(frequency) {
         case "Every day":
-            return "10,950 - 14,600 miles/year";
+            return 13000;
         case "A few times a week":
-            return "3,120 - 6,240 miles/year";
+            return 5000;
         case "A few times a month":
-            return "480 - 1,080 miles/year";
+            return 750;
         case "Rarely":
-            return "Less than 240 miles/year";
+            return 200;
         case "Never":
-            return "0 miles/year";
+            return 0;
+        default:
+            return "Unknown";
+    }
+}
+
+function estimateShortFlights(frequency) {
+    switch(frequency) {
+        case "0":
+            return 0;
+        case "1-3":
+            return 2;
+        case "4+":
+            return 5;
         default:
             return "Unknown";
     }
