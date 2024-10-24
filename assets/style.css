@@ -4,7 +4,7 @@
   --primary-color: #d9f2b4;
   --secondary-color: #bcf4f5;
   --standby-color: #4509fa;
-} 
+}
 
 
 * {
@@ -21,7 +21,6 @@ body {
 
 .logo {
   font-size: 30px;
-  font-weight: 5400;
   text-transform: uppercase;
 } 
 
@@ -66,6 +65,7 @@ footer p {
 .calculate-container .form-check {
   margin: 1rem 0;
 }
+<<<<<<< HEAD
 .calculate-header.calculate-header-result {
 
   max-width: 80%;
@@ -77,3 +77,12 @@ footer p {
   font-weight: bold;
 
 }
+=======
+
+
+@media only screen and (max-width: 768px) {
+  .text-center-mobile {
+    text-align: center;
+  }
+}
+>>>>>>> main
