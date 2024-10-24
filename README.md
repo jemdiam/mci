@@ -1,7 +1,17 @@
+
+
+
 # Carbon Footprint Calculator
 ![screenshot of wireframe](https://github.com/jemdiam/my-carbon-impact/blob/9b1d91c372493f6118cf0f46e7a14f134abbf1c8/images/amiresponsive.png?raw=true)
 ## Project Overview
 The **Carbon Footprint Calculator** is a web application designed to help users track and reduce their carbon footprint by calculating emissions from daily activities, such as transportation, energy use, and more. Our goal is to raise awareness about personal environmental impact and provide actionable insights to encourage sustainable practices.
+
+
+![image](https://github.com/user-attachments/assets/63471b07-a357-4d69-b188-f99e4cb04646)
+
+![image](https://github.com/user-attachments/assets/9f160946-0bad-42de-8bdc-92a885e3282e)
+
+
 
 ## Installation
 To run the project locally, follow these steps:
