@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         //console.log(currentInputName);
         if (validateQuestion(currentInputName)) {
+            document.querySelector('.calculate-container').style.display = 'none';
             carbonFootprintCalculator();
         } else {
             //console.log(validateQuestion(currentInputName));
@@ -188,18 +189,24 @@ function carbonFootprintCalculator() {
     let totalFootprint = electricFootprint + gasFootprint + oilFootprint + mileageFootprint + shortFlightFootprint + longFlightFootprint + recycleFootprint;
     
     // Display result and comparison 
-    let resultText = `Your estimated yearly carbon footprint is: ${totalFootprint.toFixed(2)} pounds of CO2\n`;
-    
+    let resultText = `Your estimated yearly carbon footprint is: <span class="carbon-result">${Math.round(totalFootprint.toFixed(2))}</span> pounds of CO2\n`;
+    let resultTitle;
+
     if (totalFootprint < 6000) { 
+        resultTitle = "Great Job";
         resultText += "You have a very low carbon footprint. Great job!"; 
     } else if (totalFootprint >= 6000 && totalFootprint < 16000) {
+        resultTitle = "Good Job";
         resultText += "Your carbon footprint is considered low."; 
     } else if (totalFootprint >= 16000 && totalFootprint < 22000) {
+        resultTitle = "You could do better";
         resultText += "Your carbon footprint is average."; }
     else {
+        resultTitle = "Consider Reducing Your Environmental Impact";
         resultText += "Your carbon footprint is high. Consider adopting more sustainable practices.";
-    } 
-    document.getElementById("result").innerText = resultText; 
+    }
+    document.querySelector('.calculate-header h2').innerText = resultTitle;
+    document.querySelector('.calculate-header p').innerHTML = resultText; 
 
 }
 

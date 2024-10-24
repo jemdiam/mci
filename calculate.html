@@ -110,7 +110,7 @@
                                 <label class="btn btn-outline-success" for="driving_frequency_few_timesamonth">A few times a month</label>
                             </div>
                             <div class="d-grid gap-2 form-check">
-                                <input type="radio" class="btn-check" name="driving_frequency" id="driving_frequency_never" autocomplete="off">
+                                <input type="radio" class="btn-check" name="driving_frequency" id="driving_frequency_never" value="Never" autocomplete="off">
                                 <label class="btn btn-outline-success" for="driving_frequency_never">Never</label>
                             </div>
                         </div>
@@ -127,7 +127,7 @@
                             </div>
                             <div class="d-grid gap-2 form-check">
                                 <input type="radio" class="btn-check" name="short_flights" id="short_flights_4" value="4+" autocomplete="off">
-                                <label class="btn btn-outline-success" for="short_flights_1">4 or more flights</label>
+                                <label class="btn btn-outline-success" for="short_flights_4">4 or more flights</label>
                             </div>
                         </div>
                         <!-- Question 6: Long Flights -->
@@ -180,10 +180,14 @@
                             <button type="button" id="nextButton" class="btn btn-success">Next</button>
                             <button type="button" id="submitButton" class="btn btn-success" style="display: none;">Submit</button>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
                 <p id="error-message"></p>
-                <p id="result"></p>
+            </div>
+            
+            <div class="container text-center" id="result-container">
+                <h2 id="result-title"></h2>
+                <p id="result-content"></p>
             </div>
         </container>
         
