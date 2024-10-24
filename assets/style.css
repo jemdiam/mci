@@ -25,9 +25,9 @@ body {
   text-transform: uppercase;
 } 
 
-
-.b
-
+.bground {
+  background-image: url("img-welcome.jpg");
+}
 
 main .btn {
   color: black;
