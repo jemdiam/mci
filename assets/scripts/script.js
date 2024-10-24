@@ -77,7 +77,17 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function submitQuestion() {
-        carbonFootprintCalculator();
+        console.log(currentQuestion);
+        console.log(questions);
+        let currentInputName = questions[currentQuestion].getAttribute('data-input-name');
+        
+        console.log(currentInputName);
+        if (validateQuestion(currentInputName)) {
+            carbonFootprintCalculator();
+        } else {
+            console.log(validateQuestion(currentInputName));
+            errorMessage.innerText = "Please select an option";
+        }
     }
 
     function validateQuestion(inputName) {
