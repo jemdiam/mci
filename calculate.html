@@ -40,7 +40,7 @@
         <container>
             <header class="calculate-header text-center">
                 <h2>Carbon Footprint Calculator</h2>
-                <p>Answer the questions one by one to estimate your yearly carbon footprint.</p>
+                <p>Answer the questions below to estimate your yearly carbon footprint.</p>
             </header>
         
             <div class="container text-center calculate-container">
@@ -78,18 +78,48 @@
                         </div>
                         <!-- Question 4: Mileage -->
                         <div class="question">
-                            <p>What is your total yearly mileage on your car?</p>
-                            <input type="number" name="mileage" min="0" step="1" required>
+                            <p>How often do you drive your car?</p>
+                            <label>
+                                <input type="radio" name="driving_frequency" value="Every day" required> Every day
+                            </label><br>
+                            <label>
+                                <input type="radio" name="driving_frequency" value="A few times a week"> A few times a week
+                            </label><br>
+                            <label>
+                                <input type="radio" name="driving_frequency" value="A few times a month"> A few times a month
+                            </label><br>
+                            <label>
+                                <input type="radio" name="driving_frequency" value="Rarely"> Rarely (less than once a month)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="driving_frequency" value="Never"> Never
+                            </label>
                         </div>
                         <!-- Question 5: Short Flights -->
                         <div class="question">
-                            <p>How many flights have you taken in the past year (4 hours or less)?</p>
-                            <input type="number" name="shortFlights" min="0" step="1" required>
+                            <p>How many short flights (4 hours or less) have you taken in the past year?</p>
+                            <label>
+                                <input type="radio" name="short_flights" value="0" required> 0 flights
+                            </label><br>
+                            <label>
+                                <input type="radio" name="short_flights" value="1-3"> 1 - 3 flights
+                            </label><br>
+                            <label>
+                                <input type="radio" name="short_flights" value="4+"> 4 or more flights
+                            </label>
                         </div>
                         <!-- Question 6: Long Flights -->
                         <div class="question">
                             <p>How many flights have you taken in the past year (4 hours or more)?</p>
-                            <input type="number" name="longFlights" min="0" step="1" required>
+                            <label>
+                                <input type="radio" name="long_flights" value="0" required> 0 flights
+                            </label><br>
+                            <label>
+                                <input type="radio" name="long_flights" value="1-3"> 1 - 3 flights
+                            </label><br>
+                            <label>
+                                <input type="radio" name="long_flights" value="4+"> 4 or more flights
+                            </label>
                         </div>
                         <!-- Question 7: Electric Car -->
                         <div class="question">

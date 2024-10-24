@@ -53,4 +53,5 @@ footer p {
 }
 .calculate-container .form-check {
   margin: 1rem 0;
+  padding-left: 0;
 }
