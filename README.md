@@ -31,17 +31,14 @@ To run the project locally, follow these steps:
 - Bootstrap
 - Git & GitHub
 
-**Testing**
+
+## Testing
 Feature | What Should Happen | What does Happen |
 CTA | Take to the test page | Takes to the test page |
-Social Links | Take to Social Media | Takes to social media in new pages | 
-Navbar Button | Take  to new page | Takes to the test page|
-Website Responsive  | Website should be responsive | Website is be responsive|  
-Mobile Responsive  | Mobile should be responsive | Mobile is be responsive|  
-Footer Buttons | Take to new page | Takes to github amd social media 
-
-
-
+Social Links | Take to Social Media | Takes to social media in new pages |
+Website Responsive  | Website should be responsive | Website is be responsive|
+Mobile Responsive  | Mobile should be responsive | Mobile is be responsive|
+Footer Buttons | Take to new page | Takes to github and social media |
 
 
 ## Project Board
