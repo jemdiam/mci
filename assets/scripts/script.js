@@ -117,7 +117,9 @@ function carbonFootprintCalculator() {
     let cookingGas = document.querySelector('input[name="cookingGas"]:checked').value;
 
     // estimate yearly milage
+    console.log(document.querySelector('input[name="driving_frequency"]:checked'))
     let userFrequency = document.querySelector('input[name="driving_frequency"]:checked').value;
+    console.log(userFrequency);
     let mileage = calculateYearlyMileage(userFrequency);
     console.log("Estimated yearly mileage:", mileage);
 
@@ -127,7 +129,8 @@ function carbonFootprintCalculator() {
     console.log("Estimated number of short flights:", shortFlights);
 
     // let longFlights = parseFloat(document.querySelector('input[name="longFlights"]').value) || 0;
-    let userLongFlights = document.querySelector('input[name="short_flights"]:checked').value;
+    let userLongFlights = document.querySelector('input[name="long_flights"]:checked').value;
+    console.log(userLongFlights)
     let longFlights = estimateShortFlights(userLongFlights);
     console.log("Estimated number of short flights:", longFlights);
 
