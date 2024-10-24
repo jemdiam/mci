@@ -31,6 +31,7 @@ To run the project locally, follow these steps:
 - Bootstrap
 - Git & GitHub
 
+
 ## Testing
 Feature | What Should Happen | What does Happen |
 CTA | Take to the test page | Takes to the test page |
@@ -38,6 +39,7 @@ Social Links | Take to Social Media | Takes to social media in new pages |
 Website Responsive  | Website should be responsive | Website is be responsive|
 Mobile Responsive  | Mobile should be responsive | Mobile is be responsive|
 Footer Buttons | Take to new page | Takes to github and social media |
+
 
 ## Project Board
 Follow our progress on the [Project Board](https://github.com/users/jemdiam/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C142281905%2C142281907%2C142281906%2C%22Labels%22%5D).
