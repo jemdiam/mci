@@ -25,6 +25,11 @@ body {
   text-transform: uppercase; */
 } 
 
+.container-navbar a {
+  text-decoration: none;
+  color: black
+}
+
 main .btn {
   color: black;
   font-weight: 600;
