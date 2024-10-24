@@ -21,9 +21,14 @@ body {
 
 .logo {
   font-size: 30px;
-  font-weight: bold;
-  text-transform: uppercase;
+  /* font-weight: bold;
+  text-transform: uppercase; */
 } 
+
+.container-navbar a {
+  text-decoration: none;
+  color: black
+}
 
 main .btn {
   color: black;
