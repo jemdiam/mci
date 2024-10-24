@@ -8,18 +8,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
     prevButton.addEventListener("click", function() {
         prevQuestion();
-    })
+    });
 
     nextButton.addEventListener("click", function() {
         nextQuestion();
-    })
+    });
 
     submitButton.addEventListener("click", function() {
         submitQuestion();
-    })
+    });
+
+    let btns = document.querySelectorAll('input[type="radio"]');
+    
+    for(button of btns){
+        button.addEventListener('click', function() {
+            errorMessage.innerText = "";
+        })
+    }
 
     let currentQuestion = 0;
     const questions = document.querySelectorAll('.question');
+    const errorMessage = document.getElementById("error-message");
 
     function showQuestion(index) {
         questions.forEach((question, i) => {
@@ -28,14 +37,25 @@ document.addEventListener("DOMContentLoaded", function() {
                 question.classList.add('active');
             }
         });
+        errorMessage.innerText = "";
     }
 
     function nextQuestion() {
         if (currentQuestion < questions.length - 1) {
-            currentQuestion++;
-            showQuestion(currentQuestion);
-            console.log(questions[currentQuestion]);
             console.log(currentQuestion);
+            console.log(questions);
+            let currentInputName = questions[currentQuestion].getAttribute('data-input-name');
+            
+            console.log(currentInputName);
+            if (validateQuestion(currentInputName)) {
+                currentQuestion++;
+                showQuestion(currentQuestion);
+                console.log(questions[currentQuestion]);
+                console.log(currentQuestion);
+            } else {
+                console.log(validateQuestion(currentInputName));
+                errorMessage.innerText = "Please select an option";
+            }
         }
         prevButton.disabled = currentQuestion === 0;
         if (currentQuestion === questions.length - 1) {
@@ -58,6 +78,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function submitQuestion() {
         carbonFootprintCalculator();
+    }
+
+    function validateQuestion(inputName) {
+        console.log(inputName)
+        let radioButtons = document.getElementsByName(inputName);
+
+        for (let radio of radioButtons) {
+            console.log(radio);
+            if (radio.checked) {
+                console.log(radio.checked)
+                return true;
+            }
+        }
+        return false;
     }
 })
 

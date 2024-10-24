@@ -47,7 +47,7 @@
                 <form id="carbonForm">
                     <div class="questions-container">
                         <!-- Question 1: House Size -->
-                        <div class="question active">
+                        <div class="question active" data-input-name="houseSize">
                             <p>What is the size of your house?</p>
                             <div class="d-grid gap-2 form-check">
                                 <input type="radio" class="btn-check" name="houseSize" id="smallHouseSize" autocomplete="off">
@@ -137,11 +137,12 @@
                         <!-- Navigation Buttons -->
                         <div class="nav-buttons">
                             <button type="button" id="prevButton" class="btn btn-success" disabled>Previous</button>
-                            <button type="button" id="nextButton" class="btn btn-success" disabled>Next</button>
+                            <button type="button" id="nextButton" class="btn btn-success">Next</button>
                             <button type="button" id="submitButton" class="btn btn-success" style="display: none;">Submit</button>
                         </div>
                     </form>
                 </div>
+                <p id="error-message"></p>
                 <p id="result"></p>
             </div>
         </container>
