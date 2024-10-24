@@ -21,9 +21,15 @@ body {
 
 .logo {
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 5400;
   text-transform: uppercase;
 } 
+
+
+.bground {
+  background-image: url("img-welcome.jpg"); cover
+}
+
 
 main .btn {
   color: black;
@@ -33,6 +39,14 @@ main .btn {
 main .btn:hover {
   background-color: #d0f29e;
 }
+
+.player {
+
+  aspect-ratio: 19 / 6;
+  width: 80%;
+}
+
+
 
 footer p {
   margin-bottom: 0;
