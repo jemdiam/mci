@@ -65,74 +65,114 @@
                         <!-- Question 2: Heating Type -->
                         <div class="question" data-input-name="heatingType">
                             <p>How do you heat your home?</p>
-                            <label><input type="radio" name="heatingType" value="gas"> Mostly Gas</label><br>
-                            <label><input type="radio" name="heatingType" value="oil"> Mostly Oil</label><br>
-                            <label><input type="radio" name="heatingType" value="other"> Other (Electric/None)</label>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="heatingType" id="gasHeatingType" autocomplete="off">
+                                <label class="btn btn-outline-success" for="gasHeatingType" value="gas">Mostly Gas</label>
+                            </div>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="heatingType" id="oilHeatingType" autocomplete="off">
+                                <label class="btn btn-outline-success" for="oilHeatingType" value="oil">Mostly Oil</label>
+                            </div>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="heatingType" id="otherHeatingType" autocomplete="off">
+                                <label class="btn btn-outline-success" for="otherHeatingType" value="other">Other (Electric/None)</label>
+                            </div>
                         </div>
                         <!-- Question 3: Cooking Gas -->
                         <div class="question" data-input-name="cookingGas">
                             <p>How often do you cook with gas?</p>
-                            <label><input type="radio" name="cookingGas" value="rarely"> Rarely</label><br>
-                            <label><input type="radio" name="cookingGas" value="sometimes"> Sometimes</label><br>
-                            <label><input type="radio" name="cookingGas" value="often"> Often</label>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="cookingGas" id="rearlyCookingGas" autocomplete="off">
+                                <label class="btn btn-outline-success" for="rearlyCookingGas" value="rarely">Rarely</label>
+                            </div>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="cookingGas" id="sometimesCookingGas" autocomplete="off">
+                                <label class="btn btn-outline-success" for="sometimesCookingGas" value="rarely">Sometimes</label>
+                            </div>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="cookingGas" id="oftenCookingGas" autocomplete="off">
+                                <label class="btn btn-outline-success" for="oftenCookingGas" value="often">Often</label>
+                            </div>
                         </div>
                         <!-- Question 4: Mileage -->
                         <div class="question" data-input-name="driving_frequency">
                             <p>How often do you drive your car?</p>
-                            <label>
-                                <input type="radio" name="driving_frequency" value="Every day" required> Every day
-                            </label><br>
-                            <label>
-                                <input type="radio" name="driving_frequency" value="A few times a week"> A few times a week
-                            </label><br>
-                            <label>
-                                <input type="radio" name="driving_frequency" value="A few times a month"> A few times a month
-                            </label><br>
-                            <label>
-                                <input type="radio" name="driving_frequency" value="Rarely"> Rarely (less than once a month)
-                            </label><br>
-                            <label>
-                                <input type="radio" name="driving_frequency" value="Never"> Never
-                            </label>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="driving_frequency" id="driving_frequency_everyday" autocomplete="off">
+                                <label class="btn btn-outline-success" for="driving_frequency_everyday" value="Every day">Every day</label>
+                            </div>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="driving_frequency" id="driving_frequency_few_timesaweek" autocomplete="off">
+                                <label class="btn btn-outline-success" for="driving_frequency_few_timesaweek" value="A few times a week">A few times a week</label>
+                            </div>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="driving_frequency" id="driving_frequency_few_timesamonth" autocomplete="off">
+                                <label class="btn btn-outline-success" for="driving_frequency_few_timesamonth" value="A few times a month">A few times a month</label>
+                            </div>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="driving_frequency" id="driving_frequency_rarely" autocomplete="off">
+                                <label class="btn btn-outline-success" for="driving_frequency_rarely" value="Rarely">Rarely (less than once a month)</label>
+                            </div>
                         </div>
                         <!-- Question 5: Short Flights -->
                         <div class="question" data-input-name="short_flights">
                             <p>How many short flights (4 hours or less) have you taken in the past year?</p>
-                            <label>
-                                <input type="radio" name="short_flights" value="0" required> 0 flights
-                            </label><br>
-                            <label>
-                                <input type="radio" name="short_flights" value="1-3"> 1 - 3 flights
-                            </label><br>
-                            <label>
-                                <input type="radio" name="short_flights" value="4+"> 4 or more flights
-                            </label>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="short_flights" id="short_flights_0" autocomplete="off">
+                                <label class="btn btn-outline-success" for="short_flights_0" value="0">0 flights</label>
+                            </div>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="short_flights" id="short_flights_1" autocomplete="off">
+                                <label class="btn btn-outline-success" for="short_flights_1" value="1-3">1 - 3 flights</label>
+                            </div>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="short_flights" id="short_flights_4" autocomplete="off">
+                                <label class="btn btn-outline-success" for="short_flights_1" value="4+">4 or more flights</label>
+                            </div>
                         </div>
                         <!-- Question 6: Long Flights -->
                         <div class="question" data-input-name="long_flights">
-                            <p>How many flights have you taken in the past year (4 hours or more)?</p>
-                            <label>
-                                <input type="radio" name="long_flights" value="0" required> 0 flights
-                            </label><br>
-                            <label>
-                                <input type="radio" name="long_flights" value="1-3"> 1 - 3 flights
-                            </label><br>
-                            <label>
-                                <input type="radio" name="long_flights" value="4+"> 4 or more flights
-                            </label>
+                            <p>How many long flights (4 hours or less) have you taken in the past year?</p>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="long_flights" id="long_flights_0" autocomplete="off">
+                                <label class="btn btn-outline-success" for="long_flights_0" value="0">0 flights</label>
+                            </div>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="long_flights" id="long_flights_1" autocomplete="off">
+                                <label class="btn btn-outline-success" for="long_flights_1" value="1-3">1 - 3 flights</label>
+                            </div>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="long_flights" id="long_flights_4" autocomplete="off">
+                                <label class="btn btn-outline-success" for="long_flights_4" value="4+">4 or more flights</label>
+                            </div>
                         </div>
                         <!-- Question 7: Electric Car -->
                         <div class="question" data-input-name="electricCar">
                             <p>Do you own an electric car?</p>
-                            <label><input type="radio" name="electricCar" value="yes"> Yes</label><br>
-                            <label><input type="radio" name="electricCar" value="no"> No</label>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="electricCar" id="electricCarYes" autocomplete="off">
+                                <label class="btn btn-outline-success" for="electricCarYes" value="yes">Yes</label>
+                            </div>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="electricCar" id="electricCarNo" autocomplete="off">
+                                <label class="btn btn-outline-success" for="electricCarNo" value="no">No</label>
+                            </div>
                         </div>
                         <!-- Question 8: Recycle at Home -->
                         <div class="question" data-input-name="recycleAtHome">
                             <p>Do you recycle at home?</p>
-                            <label><input type="radio" name="recycleAtHome" value="yesAll"> Yes, all materials</label><br>
-                            <label><input type="radio" name="recycleAtHome" value="yesSome"> Yes, some materials</label><br>
-                            <label><input type="radio" name="recycleAtHome" value="no"> No, I do not recycle</label>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="recycleAtHome" id="recycleAtHomeYesAll" autocomplete="off">
+                                <label class="btn btn-outline-success" for="recycleAtHomeYesAll" value="yesAll">Yes, all materials</label>
+                            </div>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="recycleAtHome" id="recycleAtHomeYesSome" autocomplete="off">
+                                <label class="btn btn-outline-success" for="recycleAtHomeYesSome" value="yesSome">Yes, some materials</label>
+                            </div>
+                            <div class="d-grid gap-2 form-check">
+                                <input type="radio" class="btn-check" name="recycleAtHome" id="recycleAtHomeNo" autocomplete="off">
+                                <label class="btn btn-outline-success" for="recycleAtHomeNo" value="no">No, I do not recycle</label>
+                            </div>
                         </div>
                         <!-- Navigation Buttons -->
                         <div class="nav-buttons">

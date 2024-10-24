@@ -42,18 +42,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function nextQuestion() {
         if (currentQuestion < questions.length - 1) {
-            console.log(currentQuestion);
-            console.log(questions);
+            // console.log(currentQuestion);
+            // console.log(questions);
             let currentInputName = questions[currentQuestion].getAttribute('data-input-name');
             
-            console.log(currentInputName);
+            //console.log(currentInputName);
             if (validateQuestion(currentInputName)) {
                 currentQuestion++;
                 showQuestion(currentQuestion);
-                console.log(questions[currentQuestion]);
-                console.log(currentQuestion);
+                // console.log(questions[currentQuestion]);
+                // console.log(currentQuestion);
             } else {
-                console.log(validateQuestion(currentInputName));
+                //console.log(validateQuestion(currentInputName));
                 errorMessage.innerText = "Please select an option";
             }
         }
@@ -77,27 +77,27 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function submitQuestion() {
-        console.log(currentQuestion);
-        console.log(questions);
+        // console.log(currentQuestion);
+        // console.log(questions);
         let currentInputName = questions[currentQuestion].getAttribute('data-input-name');
         
-        console.log(currentInputName);
+        //console.log(currentInputName);
         if (validateQuestion(currentInputName)) {
             carbonFootprintCalculator();
         } else {
-            console.log(validateQuestion(currentInputName));
+            //console.log(validateQuestion(currentInputName));
             errorMessage.innerText = "Please select an option";
         }
     }
 
     function validateQuestion(inputName) {
-        console.log(inputName)
+        //console.log(inputName)
         let radioButtons = document.getElementsByName(inputName);
 
         for (let radio of radioButtons) {
-            console.log(radio);
+            //console.log(radio);
             if (radio.checked) {
-                console.log(radio.checked)
+                //console.log(radio.checked)
                 return true;
             }
         }
