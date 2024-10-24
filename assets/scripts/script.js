@@ -42,18 +42,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function nextQuestion() {
         if (currentQuestion < questions.length - 1) {
-            // console.log(currentQuestion);
-            // console.log(questions);
+            
             let currentInputName = questions[currentQuestion].getAttribute('data-input-name');
             
-            //console.log(currentInputName);
             if (validateQuestion(currentInputName)) {
                 currentQuestion++;
                 showQuestion(currentQuestion);
-                // console.log(questions[currentQuestion]);
-                // console.log(currentQuestion);
             } else {
-                //console.log(validateQuestion(currentInputName));
                 errorMessage.innerText = "Please select an option";
             }
         }
@@ -77,28 +72,22 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function submitQuestion() {
-        // console.log(currentQuestion);
-        // console.log(questions);
+        
         let currentInputName = questions[currentQuestion].getAttribute('data-input-name');
         
-        //console.log(currentInputName);
         if (validateQuestion(currentInputName)) {
             document.querySelector('.calculate-container').style.display = 'none';
             carbonFootprintCalculator();
         } else {
-            //console.log(validateQuestion(currentInputName));
             errorMessage.innerText = "Please select an option";
         }
     }
 
     function validateQuestion(inputName) {
-        //console.log(inputName)
         let radioButtons = document.getElementsByName(inputName);
 
         for (let radio of radioButtons) {
-            //console.log(radio);
             if (radio.checked) {
-                //console.log(radio.checked)
                 return true;
             }
         }
@@ -118,22 +107,18 @@ function carbonFootprintCalculator() {
     let cookingGas = document.querySelector('input[name="cookingGas"]:checked').value;
 
     // estimate yearly milage
-    console.log(document.querySelector('input[name="driving_frequency"]:checked'))
     let userFrequency = document.querySelector('input[name="driving_frequency"]:checked').value;
-    console.log(userFrequency);
     let mileage = calculateYearlyMileage(userFrequency);
-    console.log("Estimated yearly mileage:", mileage);
 
     //let shortFlights = parseFloat(document.querySelector('input[name="shortFlights"]').value) || 0;
     let userShortFlights = document.querySelector('input[name="short_flights"]:checked').value;
     let shortFlights = estimateShortFlights(userShortFlights);
-    console.log("Estimated number of short flights:", shortFlights);
 
     // let longFlights = parseFloat(document.querySelector('input[name="longFlights"]').value) || 0;
     let userLongFlights = document.querySelector('input[name="long_flights"]:checked').value;
-    console.log(userLongFlights)
+    
     let longFlights = estimateShortFlights(userLongFlights);
-    console.log("Estimated number of short flights:", longFlights);
+    
 
     let electricCar = document.querySelector('input[name="electricCar"]:checked').value;
     let recycleAtHome = document.querySelector('input[name="recycleAtHome"]:checked').value;
@@ -182,14 +167,10 @@ function carbonFootprintCalculator() {
     }
     
     // Total carbon footprint
-    console.log(mileage);
-    console.log(mileageFootprint);
-    console.log(shortFlightFootprint);
-    console.log(longFlightFootprint);
     let totalFootprint = electricFootprint + gasFootprint + oilFootprint + mileageFootprint + shortFlightFootprint + longFlightFootprint + recycleFootprint;
     
     // Display result and comparison 
-    let resultText = `Your estimated yearly carbon footprint is: <span class="carbon-result">${Math.round(totalFootprint.toFixed(2))}</span> pounds of CO2\n`;
+    let resultText = `Your estimated yearly carbon footprint is: <span class="carbon-result">${Math.round(totalFootprint.toFixed(2))}  pounds of CO2</span>\n`;
     let resultTitle;
 
     if (totalFootprint < 6000) { 
@@ -205,6 +186,7 @@ function carbonFootprintCalculator() {
         resultTitle = "Consider Reducing Your Environmental Impact";
         resultText += "Your carbon footprint is high. Consider adopting more sustainable practices.";
     }
+    document.querySelector('.calculate-header').classList.add('calculate-header-result');
     document.querySelector('.calculate-header h2').innerText = resultTitle;
     document.querySelector('.calculate-header p').innerHTML = resultText; 
 
